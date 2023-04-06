@@ -1,0 +1,8 @@
+<div style="width: 500px;height: 250px;background-color: pink;margin: auto;display: flex;flex-direction: column; justify-content: center;align-items: center;">
+    <input type="text" (input)="inputChanged($event)"/>
+    <div>
+            <p>{{input}}</p>
+    </div>
+    <input type="button" (click)="Clear()" value="Reset"/>
+
+</div>
