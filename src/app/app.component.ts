@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ComponentInteraction';
+
+  students: {name: string, age: string}[] = [];
+
+  onAddStudent(student: {name: string, age: string}) {
+    this.students.push(student);
+  }
 }

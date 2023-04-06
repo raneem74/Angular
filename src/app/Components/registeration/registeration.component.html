@@ -1,0 +1,15 @@
+<div class="form-container">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="name">
+    <div *ngIf="name.length<3;" style="color: red; text-align: center;">
+        <p>Name is too short</p>
+    </div>
+  
+    <label for="age">Age:</label>
+    <input type="text" id="age" [(ngModel)]="age">
+    <div *ngIf="+age>60 || +age<20;" style="color: red; text-align: center;">
+        <p>Age not valid</p>
+    </div>
+  
+    <button (click)="add()">Add</button>
+  </div>
