@@ -1,0 +1,28 @@
+<section>
+    <h2>Home Page</h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+        <div *ngIf="!nameValid" style="color: red;">
+            Name Not Valid
+        </div>
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" formControlName="age">
+        <div *ngIf="!ageValid" style="color: red;">
+            age Not Valid
+        </div>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+        <div *ngIf="!emailValid" style="color: red;">
+            Email Not Valid
+        </div>
+      </div>
+      <button type="submit" [disabled]="myForm.invalid">Submit</button>
+    </form>
+  </section>
+  
